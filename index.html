@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bubble Pons — explore the crypto market through a living bubble map.">
+  <title>Bubble Pons The Pons Market In Bubbles</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=57">
+</head>
+<body class="page-home home-snap">
+  <div class="sky-environment" aria-hidden="true">
+    <div class="sky-gradient"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+    <div class="cloud cloud-5"></div>
+    <div class="atmosphere"></div>
+    <div class="bg-bubbles" id="bgBubbles"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav-bar" aria-label="Primary">
+      <a class="nav-brand" href="#home">
+        <img src="logo.png" alt="" class="nav-logo" width="40" height="40">
+        <span class="nav-brand-text">BUBBLE PONS</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-scroll active" data-section="home">HOME</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-nav btn-x" href="https://x.com/BubblePons" target="_blank" rel="noopener noreferrer" aria-label="Follow Bubble Pons on X">
+            <img class="x-icon" src="x-logo.png" alt="X" width="18" height="18">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="snap-scroller">
+    <section class="snap-panel hero home-hero is-active" id="home" aria-labelledby="hero-title">
+      <div class="panel-stage home-stage">
+        <div class="hero-inner panel-appear">
+          <p class="eyebrow">LIVE VISUAL MARKET</p>
+          <h1 id="hero-title">
+            <span class="hero-line accent">THE PONS MARKET</span>
+            <span class="hero-line accent">IN BUBBLES</span>
+          </h1>
+          <p class="hero-sub">Explore tokens through a living bubble map. Discover momentum, volume, and market activity at a glance.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-show-coming-soon" href="#home" id="exploreMapBtn">EXPLORE THE MAP</a>
+          </div>
+        </div>
+        <div class="home-hero-bubbles panel-appear" aria-hidden="true">
+          <img src="bubble.png" class="home-float-bubble hfb-1" alt="">
+          <img src="bubble.png" class="home-float-bubble hfb-2" alt="">
+          <img src="bubble.png" class="home-float-bubble hfb-3" alt="">
+          <img src="bubble.png" class="home-float-bubble hfb-4" alt="">
+        </div>
+      </div>
+
+      <figure class="home-map-holder" id="homeMapHolder">
+        <div class="about-map-frame" id="aboutMapHolder">
+          <img
+            class="about-map-image"
+            id="homeMapImage"
+            src="about-bubble-map.png"
+            alt="Bubble Pons bubble map with timeframe, filter, and size controls"
+            width="1600"
+            height="1000"
+          >
+        </div>
+        <figcaption class="visually-hidden">Bubble map preview</figcaption>
+      </figure>
+
+      <div class="home-map-soon" id="homeMapSoon" aria-hidden="true">
+        <span class="home-map-soon-label">COMING SOON</span>
+      </div>
+
+      <a class="scroll-hint" href="#home" id="homeScrollHint" aria-label="Scroll to explore map preview">
+        <span>SCROLL</span>
+        <span class="scroll-hint-arrow" aria-hidden="true"></span>
+      </a>
+    </section>
+  </main>
+
+  <aside class="token-panel" id="tokenPanel" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="panelTokenName">
+    <div class="token-panel-backdrop" id="panelBackdrop"></div>
+    <div class="token-panel-sheet glass-panel">
+      <button type="button" class="panel-close" id="panelClose" aria-label="Close token details">&times;</button>
+      <div class="panel-bubble-preview">
+        <img src="bubble.png" alt="" class="panel-bubble-img" id="panelBubbleImg">
+        <div class="panel-bubble-glow" id="panelBubbleGlow"></div>
+      </div>
+      <h2 id="panelTokenName">PONS</h2>
+      <p class="panel-ticker" id="panelTicker">$PONS</p>
+      <p class="panel-change" id="panelChange">+42.8%</p>
+      <dl class="panel-stats">
+        <div>
+          <dt>MARKET CAP</dt>
+          <dd id="panelMcap">$12.4M</dd>
+        </div>
+        <div>
+          <dt>VOLUME</dt>
+          <dd id="panelVolume">$3.1M</dd>
+        </div>
+        <div>
+          <dt>STATUS</dt>
+          <dd id="panelStatus">TRENDING</dd>
+        </div>
+      </dl>
+      <a class="btn btn-primary panel-cta js-open-map" href="map.html" id="panelCta">VIEW TOKEN</a>
+      <p class="panel-disclaimer">Demo data for illustration only.</p>
+    </div>
+  </aside>
+
+  <script src="script.js?v=45"></script>
+</body>
+</html>
